@@ -14,8 +14,7 @@ app.get('/', function (req, res) {
 });
 
 app.post("/api/fileanalyse", upload.single('upfile'), (req, res) => {
-  console.log("Form Submitted");
-  console.log(req.file);
+  // Reads metadata from file and returns as a JSON object. 
   res.json({
   name: req.file.originalname,
   type: req.file.mimetype,
